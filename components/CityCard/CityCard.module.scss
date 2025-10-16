@@ -1,0 +1,150 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    min-height: 16rem;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.country {
+    font-weight: 500;
+    color: rgba(15, 23, 42, 0.7);
+}
+
+.description {
+    font-size: 0.95rem;
+    color: rgba(15, 23, 42, 0.65);
+    text-transform: capitalize;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+}
+
+.body {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+.meta {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    font-size: 0.9rem;
+    color: rgba(15, 23, 42, 0.75);
+
+    dt {
+        font-weight: 600;
+        margin-bottom: 0.15rem;
+    }
+
+    dd {
+        margin: 0;
+    }
+}
+
+.footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+.updated {
+    color: rgba(15, 23, 42, 0.6);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+
+    &:hover:not(:disabled) {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background: rgba(37, 99, 235, 0.5);
+    }
+}
+
+.danger {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: rgba(239, 68, 68, 0.9);
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background: rgba(220, 38, 38, 0.95);
+        transform: translateY(-1px);
+    }
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: 1.25rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: stretch;
+
+        button {
+            flex: 1 1 auto;
+        }
+    }
+}
