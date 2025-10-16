@@ -70,7 +70,6 @@ const CityCard = ({ city }: CityCardProps) => {
                 </div>
             </Link>
             <footer className={styles.footer}>
-                <span className={styles.updated}>Оновлено о {updatedLabel}</span>
                 <div className={styles.actions}>
                     <button
                         type="button"
